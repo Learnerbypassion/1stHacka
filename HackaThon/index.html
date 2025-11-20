@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kolkata Pincode History</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div>
+          <h1>Kolkata Pincode Directory</h1>
+          <p class="tagline">Explore the history and significance of Kolkata's landmarks</p>
+        </div>
+        <div class="controls">
+          <input type="text" id="search-input" placeholder="Search by pincode or place...">
+          <button id="theme-toggle">
+            <i class="fas fa-moon"></i> Dark Mode
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container main-content">
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-value" id="total-pincodes">20</div>
+        <div class="stat-label">Total Pincodes</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="filtered-pincodes">20</div>
+        <div class="stat-label">Displayed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">700001</div>
+        <div class="stat-label">Starting Pincode</div>
+      </div>
+    </div>
+
+    <div id="pincode-grid"></div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="place-name"></h2>
+        <span id="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h3>Pincode Information</h3>
+          <p><strong>Pincode:</strong> <span id="pincode"></span></p>
+          <p id="history"></p>
+        </div>
+        <div class="modal-section">
+          <h3>Additional Information</h3>
+          <div id="wiki-content" class="wiki-content">
+            <div class="loading">
+              <i class="fas fa-spinner fa-spin"></i> Loading from Wikipedia...
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="read-more-btn" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i> Read More on Wikipedia
+        </button>
+        <button id="close-modal-btn" class="btn btn-secondary">
+          <i class="fas fa-times"></i> Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>Kolkata Pincode Directory &copy; 2023 | Explore the City of Joy</p>
+    </div>
+  </footer>
+
+ <script src="script.js"></script>
+</body>
+</html>
